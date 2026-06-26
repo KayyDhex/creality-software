@@ -160,7 +160,6 @@ export default function Hero() {
               initial={{ opacity: 0, x: 40 }}
               animate={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.6, delay: 1.4 + card.delay, ease: [0.22, 1, 0.36, 1] }}
-              style2={{ x: springX, y: springY }}
             >
               <p className="text-xs font-semibold mb-2" style={{ color: 'var(--cr-accent)', fontFamily: 'Syne, sans-serif' }}>{card.title}</p>
               <pre className="text-xs leading-relaxed whitespace-pre-wrap" style={{ color: 'rgba(255,255,255,0.6)', fontFamily: 'monospace' }}>{card.code}</pre>
