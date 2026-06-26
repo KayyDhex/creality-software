@@ -1,26 +1,103 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --cr-dark: #001d4a;
+  --cr-mid: #0a2d5e;
+  --cr-accent: #4584ab;
+  --cr-light: #e8f2f8;
+  --cr-white: #ffffff;
+  --cr-gray: #f4f7fa;
+  --grad-hero: linear-gradient(135deg, #001d4a 0%, #0d3060 50%, #1a4a7a 100%);
+  --grad-accent: linear-gradient(135deg, #4584ab, #2d6b8f);
+  --grad-card: linear-gradient(145deg, rgba(255,255,255,0.06), rgba(255,255,255,0.01));
 }
 
 @theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  --color-cr-dark: var(--cr-dark);
+  --color-cr-mid: var(--cr-mid);
+  --color-cr-accent: var(--cr-accent);
+  --color-cr-light: var(--cr-light);
+  --color-cr-white: var(--cr-white);
+  --color-cr-gray: var(--cr-gray);
+  --font-syne: var(--font-syne), sans-serif;
+  --font-inter: var(--font-inter), sans-serif;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: 'Inter', sans-serif;
+  font-size: 15px;
+  line-height: 1.65;
+  background: var(--cr-white);
+  color: var(--cr-dark);
+  overflow-x: hidden;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+/* Shimmer button effect */
+.btn-shimmer {
+  position: relative;
+  overflow: hidden;
+}
+.btn-shimmer::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 60%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255,255,255,0.25), transparent);
+  transition: left 0.6s ease;
+}
+.btn-shimmer:hover::after {
+  left: 150%;
+}
+
+/* Navbar link underline */
+.nav-link {
+  position: relative;
+}
+.nav-link::after {
+  content: '';
+  position: absolute;
+  bottom: -2px;
+  left: 50%;
+  right: 50%;
+  height: 1px;
+  background: var(--cr-accent);
+  transition: left 0.25s ease, right 0.25s ease;
+}
+.nav-link:hover::after {
+  left: 0;
+  right: 0;
+}
+
+/* Dot grid animation */
+@keyframes dotPulse {
+  0%, 100% { opacity: 0.3; }
+  50% { opacity: 0.6; }
+}
+
+/* Custom cursor */
+#custom-cursor {
+  pointer-events: none;
+  position: fixed;
+  z-index: 9999;
+  border-radius: 50%;
+  mix-blend-mode: difference;
+  transition: width 0.2s ease, height 0.2s ease, background 0.2s ease;
 }
