@@ -107,8 +107,8 @@ export default function Hero() {
           >
             <a
               href="#servicios"
-              className="btn-shimmer inline-flex items-center gap-2 px-6 py-3 rounded-lg text-sm font-semibold text-white group"
-              style={{ background: 'var(--grad-accent)' }}
+              className="btn-shimmer inline-flex items-center gap-2 px-6 py-3 rounded-lg text-sm font-semibold group"
+              style={{ background: 'var(--grad-cta)', color: '#001d4a' }}
             >
               Ver cómo trabajamos
               <ArrowRight size={16} className="transition-transform group-hover:translate-x-1" />

@@ -34,10 +34,8 @@ export default function Navbar() {
       >
         <div className="max-w-6xl mx-auto px-6 h-16 flex items-center justify-between">
           {/* Logo */}
-          <a href="#" className="flex items-baseline gap-1" style={{ fontFamily: 'Syne, sans-serif', fontWeight: 700, fontSize: 22, color: 'var(--cr-white)', textDecoration: 'none' }}>
-            <span style={{ color: 'var(--cr-accent)' }}>C</span>Reality
-            <span style={{ width: 4, height: 4, borderRadius: '50%', background: 'var(--cr-accent)', display: 'inline-block', margin: '0 4px 3px' }} />
-            <span style={{ color: '#94a3b8', fontSize: 13, fontWeight: 400, fontFamily: 'Inter, sans-serif' }}>software</span>
+          <a href="#" style={{ textDecoration: 'none', display: 'flex', alignItems: 'center' }}>
+            <img src="/logos/Logo blanco.svg" alt="CReality Software" height={34} style={{ height: 34, width: 'auto' }} />
           </a>
 
           {/* Desktop links */}
@@ -47,7 +45,7 @@ export default function Navbar() {
                 {l.label}
               </a>
             ))}
-            <a href="#contacto" className="btn-shimmer px-5 py-2 rounded-lg text-sm font-semibold text-white" style={{ background: 'var(--grad-accent)', textDecoration: 'none' }}>
+            <a href="#contacto" className="btn-shimmer px-5 py-2 rounded-lg text-sm font-semibold" style={{ background: 'var(--grad-cta)', color: '#001d4a', textDecoration: 'none' }}>
               Hablemos
             </a>
           </div>
@@ -86,7 +84,7 @@ export default function Navbar() {
                   {l.label}
                 </a>
               ))}
-              <a href="#contacto" className="btn-shimmer px-5 py-3 rounded-lg text-sm font-semibold text-white text-center mt-4" style={{ background: 'var(--grad-accent)', textDecoration: 'none' }} onClick={() => setOpen(false)}>
+              <a href="#contacto" className="btn-shimmer px-5 py-3 rounded-lg text-sm font-semibold text-center mt-4" style={{ background: 'var(--grad-cta)', color: '#001d4a', textDecoration: 'none' }} onClick={() => setOpen(false)}>
                 Hablemos
               </a>
             </motion.div>

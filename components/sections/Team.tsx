@@ -32,10 +32,10 @@ export default function Team() {
         >
           <p className="text-xs font-semibold uppercase tracking-widest mb-3" style={{ color: 'var(--cr-accent)' }}>El equipo</p>
           <h2 className="mb-4" style={{ fontFamily: 'Syne, sans-serif', fontWeight: 700, fontSize: 'clamp(28px, 3vw, 40px)', color: 'var(--cr-dark)', letterSpacing: '-0.02em' }}>
-            Las personas detrás
+            Los fundadores
           </h2>
           <p className="max-w-xl mx-auto" style={{ color: '#64748b', fontSize: 15 }}>
-            No somos una agencia. Somos dos personas que llevan años resolviendo problemas técnicos complejos y decidieron hacerlo por su cuenta.
+            Los fundadores y cara de CReality. Llevan años resolviendo problemas técnicos complejos — y decidieron construir algo propio.
           </p>
         </motion.div>
 

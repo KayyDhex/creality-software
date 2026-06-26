@@ -4,10 +4,8 @@ export default function Footer() {
       <div className="max-w-6xl mx-auto px-6 py-14">
         <div className="flex flex-col md:flex-row justify-between gap-10">
           <div className="max-w-xs">
-            <div className="flex items-baseline gap-1 mb-3" style={{ fontFamily: 'Syne, sans-serif', fontWeight: 700, fontSize: 22 }}>
-              <span style={{ color: 'var(--cr-accent)' }}>C</span>Reality
-              <span style={{ width: 4, height: 4, borderRadius: '50%', background: 'var(--cr-accent)', display: 'inline-block', margin: '0 4px 3px' }} />
-              <span style={{ color: '#64748b', fontSize: 13, fontWeight: 400, fontFamily: 'Inter, sans-serif' }}>software</span>
+            <div className="mb-4">
+              <img src="/logos/Logo blanco.svg" alt="CReality Software" height={32} style={{ height: 32, width: 'auto' }} />
             </div>
             <p style={{ color: '#64748b', fontSize: 13 }}>Software hecho para resolver, no para impresionar.</p>
           </div>

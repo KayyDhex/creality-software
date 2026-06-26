@@ -24,11 +24,8 @@ export default function PageLoader() {
             initial={{ opacity: 0 }}
             animate={{ opacity: [0, 1, 1, 0.8] }}
             transition={{ duration: 0.7, times: [0, 0.4, 0.7, 1] }}
-            className="flex items-baseline gap-0.5"
-            style={{ fontFamily: 'Syne, sans-serif', fontWeight: 700, fontSize: 32, color: 'var(--cr-white)' }}
           >
-            <span style={{ color: 'var(--cr-accent)' }}>C</span>Reality
-            <span style={{ color: '#64748b', fontSize: 14, marginLeft: 4 }}>software</span>
+            <img src="/logos/Logo blanco.svg" alt="CReality Software" height={44} style={{ height: 44, width: 'auto' }} />
           </motion.div>
         </motion.div>
       )}

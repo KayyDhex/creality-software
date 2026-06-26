@@ -33,8 +33,8 @@ export default function CtaFinal() {
           <div className="flex flex-wrap justify-center gap-4">
             <a
               href="mailto:contacto@creality.co"
-              className="btn-shimmer inline-flex items-center gap-2 px-7 py-3.5 rounded-lg text-sm font-semibold text-white"
-              style={{ background: 'var(--grad-accent)' }}
+              className="btn-shimmer inline-flex items-center gap-2 px-7 py-3.5 rounded-lg text-sm font-semibold"
+              style={{ background: 'var(--grad-cta)', color: '#001d4a' }}
             >
               Agendar llamada <ArrowRight size={15} />
             </a>

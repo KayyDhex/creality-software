@@ -7,8 +7,10 @@
   --cr-light: #e8f2f8;
   --cr-white: #ffffff;
   --cr-gray: #f4f7fa;
+  --cr-cta: #ECA400;
   --grad-hero: linear-gradient(135deg, #001d4a 0%, #0d3060 50%, #1a4a7a 100%);
   --grad-accent: linear-gradient(135deg, #4584ab, #2d6b8f);
+  --grad-cta: linear-gradient(135deg, #ECA400, #d49200);
   --grad-card: linear-gradient(145deg, rgba(255,255,255,0.06), rgba(255,255,255,0.01));
 }
 
