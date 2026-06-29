@@ -6,7 +6,6 @@ import { Menu, X } from 'lucide-react'
 const links = [
   { label: 'Servicios', href: '#servicios' },
   { label: 'Proyectos', href: '#proyectos' },
-  { label: 'Nosotros', href: '#nosotros' },
 ]
 
 export default function Navbar() {
