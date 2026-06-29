@@ -33,12 +33,9 @@ export default function Navbar() {
         transition={{ duration: 0.5, delay: 1 }}
       >
         <div className="max-w-6xl mx-auto px-6 h-16 flex items-center justify-between">
-          {/* Logo */}
-          <a href="#" style={{ textDecoration: 'none', display: 'flex', alignItems: 'center' }}>
+          <a href="/" style={{ textDecoration: 'none', display: 'flex', alignItems: 'center' }}>
             <img src="/logos/Logo blanco.svg" alt="CReality Software" height={34} style={{ height: 34, width: 'auto' }} />
           </a>
-
-          {/* Desktop links */}
           <div className="hidden md:flex items-center gap-8">
             {links.map(l => (
               <a key={l.href} href={l.href} className="nav-link text-sm font-medium" style={{ color: 'rgba(255,255,255,0.8)', textDecoration: 'none' }}>
@@ -49,8 +46,6 @@ export default function Navbar() {
               Hablemos
             </a>
           </div>
-
-          {/* Mobile hamburger */}
           <button
             className="md:hidden text-white p-2"
             onClick={() => setOpen(o => !o)}
@@ -60,8 +55,6 @@ export default function Navbar() {
           </button>
         </div>
       </motion.nav>
-
-      {/* Mobile drawer */}
       <AnimatePresence>
         {open && (
           <motion.div

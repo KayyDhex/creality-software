@@ -95,7 +95,7 @@ export default function Contact() {
               ¡Mensaje recibido!
             </h2>
             <p style={{ color: '#64748b', fontSize: 15 }}>
-              Te contactaremos en menos de 24 horas.<br/>¡Gracias por contactarnos!
+              Te contactaremos en menos de 24 horas.<br/>¡Gracias por confiar en nosotros!
             </p>
           </motion.div>
         </div>

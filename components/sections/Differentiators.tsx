@@ -10,7 +10,7 @@ const avoid = [
 ]
 
 const doItems = [
-  'Dos personas senior en cada proyecto — sin intermediarios',
+  'Equipo senior en cada proyecto — sin intermediarios',
   'Demos parciales cada 2 semanas desde el día 1',
   'Documentación y transferencia de conocimiento incluida',
   'Propuesta personalizada después de entender tu negocio',

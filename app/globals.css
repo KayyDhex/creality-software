@@ -29,6 +29,11 @@
   box-sizing: border-box;
 }
 
+h1, h2, h3, h4, h5, h6 {
+  overflow: visible;
+  padding-bottom: 0.1em;
+}
+
 html {
   scroll-behavior: smooth;
 }
@@ -39,7 +44,7 @@ body {
   line-height: 1.65;
   background: var(--cr-white);
   color: var(--cr-dark);
-  overflow-x: hidden;
+  overflow-x: clip;
 }
 
 @media (prefers-reduced-motion: reduce) {
@@ -94,12 +99,63 @@ body {
   50% { opacity: 0.6; }
 }
 
-/* Custom cursor */
-#custom-cursor {
-  pointer-events: none;
-  position: fixed;
-  z-index: 9999;
-  border-radius: 50%;
-  mix-blend-mode: difference;
-  transition: width 0.2s ease, height 0.2s ease, background 0.2s ease;
+/* Shimmer — spec-compliant version */
+.btn-shimmer::after {
+  background: linear-gradient(105deg, transparent 40%, rgba(255,255,255,0.15) 50%, transparent 60%);
+  transform: translateX(-100%);
+  transition: transform 0.6s;
+  left: 0;
+  width: 100%;
 }
+.btn-shimmer:hover::after { transform: translateX(100%); }
+
+/* Blog card hover via CSS (Server Components can't use onMouse*) */
+.post-card {
+  background: rgba(255,255,255,0.04);
+  border: 1px solid rgba(255,255,255,0.08);
+  transition: border-color 0.2s, box-shadow 0.2s;
+}
+.post-card-link:hover .post-card {
+  border-color: rgba(69,132,171,0.4);
+  box-shadow: 0 8px 32px rgba(0,0,0,0.2);
+}
+.blog-preview-card {
+  background: rgba(255,255,255,0.04);
+  border: 1px solid rgba(255,255,255,0.07);
+  transition: border-color 0.2s;
+}
+.blog-preview-card-link:hover .blog-preview-card {
+  border-color: rgba(69,132,171,0.35);
+}
+
+/* Blog prose styles */
+.prose-creality h2 {
+  font-family: 'Syne', sans-serif; font-size: 24px; font-weight: 700;
+  color: #fff; margin-top: 48px; margin-bottom: 16px;
+  padding-bottom: 8px; border-bottom: 0.5px solid rgba(255,255,255,0.1);
+}
+.prose-creality h3 {
+  font-family: 'Syne', sans-serif; font-size: 18px; font-weight: 700;
+  color: rgba(255,255,255,0.9); margin-top: 32px; margin-bottom: 12px;
+}
+.prose-creality p { font-size: 16px; color: rgba(255,255,255,0.7); line-height: 1.75; margin-bottom: 16px; }
+.prose-creality code {
+  background: rgba(69,132,171,0.15); color: #4584ab;
+  border-radius: 4px; padding: 2px 6px; font-size: 0.875em;
+}
+.prose-creality pre {
+  background: #00122e; border: 0.5px solid rgba(255,255,255,0.08);
+  border-radius: 12px; padding: 24px; overflow-x: auto; margin: 24px 0;
+}
+.prose-creality pre code { background: none; color: rgba(255,255,255,0.8); padding: 0; }
+.prose-creality a {
+  color: #4584ab; text-decoration: none;
+  border-bottom: 1px solid rgba(69,132,171,0.3);
+}
+.prose-creality blockquote {
+  border-left: 3px solid #4584ab; padding-left: 20px;
+  color: rgba(255,255,255,0.5); font-style: italic; margin: 24px 0;
+}
+.prose-creality ul { list-style: none; padding: 0; margin-bottom: 16px; }
+.prose-creality ul li { color: rgba(255,255,255,0.7); margin-bottom: 6px; padding-left: 16px; position: relative; }
+.prose-creality ul li::before { content: '·'; position: absolute; left: 0; color: #4584ab; font-weight: 700; }

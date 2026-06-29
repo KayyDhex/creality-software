@@ -20,7 +20,6 @@ export default function Footer() {
               <img src="/logos/Logo blanco.svg" alt="CReality Software" height={32} style={{ height: 32, width: 'auto' }} />
             </div>
             <p style={{ color: '#64748b', fontSize: 13 }}>Software hecho para resolver, no para impresionar.</p>
-            {/* Social links */}
             <div className="flex gap-3 mt-5">
               <a
                 href="https://www.instagram.com/creality.sof/"

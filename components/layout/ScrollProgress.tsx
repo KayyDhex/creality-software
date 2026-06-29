@@ -16,7 +16,8 @@ export default function ScrollProgress() {
 
   return (
     <div className="fixed top-0 left-0 right-0 z-[100] h-[2px] bg-transparent">
-      <div ref={barRef} className="h-full w-0 transition-none" style={{ background: 'var(--cr-accent)' }} />
+      <div ref={barRef} className="h-full w-0"
+        style={{ background: 'linear-gradient(90deg, #4584ab, #2d6b8f)', transition: 'none' }} />
     </div>
   )
 }
